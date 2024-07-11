@@ -5,18 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./style.css" />
 
     <script defer src="./script.js"></script>
   </head>
   <body>
-    <!-- ================== Main Wrapper ================== -->
-    <div class="wrapper">
-      <!-- ================== Header Section ================== -->
-      <header class="header-wrapper">
-        <h1 class="header">Where in the world?</h1>
+    <!-- ================== Header Section ================== -->
+    <header class="header">
+      <div class="header-wrapper">
+        <h1 class="main-header">Where in the world?</h1>
 
-        <div class="color-mode-wrapper">
+        <button class="btn color-mode-btn">
           <img
             class="color-mode__icon"
             src="./icons/moon.svg"
@@ -24,23 +30,35 @@
           />
           <p class="color-mode__dark">Dark Mode</p>
           <p class="color-mode__light">Light Mode</p>
-        </div>
-      </header>
+        </button>
+      </div>
+    </header>
 
-      <!-- ================== Main Section ================== -->
-      <main class="main-wrapper">
+    <div class="wrapper">
+      <main class="content-wrapper">
         <!-- ================== Search Section ================== -->
         <section class="search-section">
-          <input
-            class="search-input"
-            type="search"
-            name=""
-            id="country-search"
-            placeholder="Search for a country..."
-            aria-label="Search through countries"
-          />
+          <form action="" class="form search-form">
+            <input
+              class="search-input"
+              type="search"
+              name=""
+              id="country-search"
+              placeholder="Search for a country..."
+              aria-label="Search through countries"
+            />
+          </form>
 
-          <input class="search-input" type="search" name="" id="" />
+          <form action="" class="form dropdown-form">
+            <select class="dropdown" name="regions" id="regions">
+              <option class="option" value="" selected>Filter by Region</option>
+              <option class="option" value="africa">Africa</option>
+              <option class="option" value="america">America</option>
+              <option class="option" value="asia">Asia</option>
+              <option class="option" value="europe">Europe</option>
+              <option class="option" value="oceania">Oceania</option>
+            </select>
+          </form>
         </section>
 
         <!-- ================== Countries Section ================== -->
@@ -51,14 +69,18 @@
               src="./icons/germany-flag.png"
               alt=""
             />
-
             <div class="country-card__desc">
-              <h2 class="country-card__header">Germany</h2>
-
+              <h2 class="country-card__header">Georgia</h2>
               <div class="country-card__details">
-                <p class="country-card__population">Population: 81,770,900</p>
-                <p class="country-card__region">Region: Europe</p>
-                <p class="country-card__capital">Capital: Berlin</p>
+                <p class="country-card__population">
+                  <strong>Population:</strong> 3,770,900
+                </p>
+                <p class="country-card__region">
+                  <strong>Region:</strong> Europe
+                </p>
+                <p class="country-card__capital">
+                  <strong>Capital:</strong> Tbilisi
+                </p>
               </div>
             </div>
           </div>
@@ -69,14 +91,18 @@
               src="./icons/germany-flag.png"
               alt=""
             />
-
             <div class="country-card__desc">
-              <h2 class="country-card__header">Germany</h2>
-
+              <h2 class="country-card__header">Georgia</h2>
               <div class="country-card__details">
-                <p class="country-card__population">Population: 81,770,900</p>
-                <p class="country-card__region">Region: Europe</p>
-                <p class="country-card__capital">Capital: Berlin</p>
+                <p class="country-card__population">
+                  <strong>Population:</strong> 3,770,900
+                </p>
+                <p class="country-card__region">
+                  <strong>Region:</strong> Europe
+                </p>
+                <p class="country-card__capital">
+                  <strong>Capital:</strong> Tbilisi
+                </p>
               </div>
             </div>
           </div>
@@ -87,14 +113,18 @@
               src="./icons/germany-flag.png"
               alt=""
             />
-
             <div class="country-card__desc">
-              <h2 class="country-card__header">Germany</h2>
-
+              <h2 class="country-card__header">Georgia</h2>
               <div class="country-card__details">
-                <p class="country-card__population">Population: 81,770,900</p>
-                <p class="country-card__region">Region: Europe</p>
-                <p class="country-card__capital">Capital: Berlin</p>
+                <p class="country-card__population">
+                  <strong>Population:</strong> 3,770,900
+                </p>
+                <p class="country-card__region">
+                  <strong>Region:</strong> Europe
+                </p>
+                <p class="country-card__capital">
+                  <strong>Capital:</strong> Tbilisi
+                </p>
               </div>
             </div>
           </div>
@@ -105,14 +135,18 @@
               src="./icons/germany-flag.png"
               alt=""
             />
-
             <div class="country-card__desc">
-              <h2 class="country-card__header">Germany</h2>
-
+              <h2 class="country-card__header">Georgia</h2>
               <div class="country-card__details">
-                <p class="country-card__population">Population: 81,770,900</p>
-                <p class="country-card__region">Region: Europe</p>
-                <p class="country-card__capital">Capital: Berlin</p>
+                <p class="country-card__population">
+                  <strong>Population:</strong> 3,770,900
+                </p>
+                <p class="country-card__region">
+                  <strong>Region:</strong> Europe
+                </p>
+                <p class="country-card__capital">
+                  <strong>Capital:</strong> Tbilisi
+                </p>
               </div>
             </div>
           </div>
@@ -123,14 +157,18 @@
               src="./icons/germany-flag.png"
               alt=""
             />
-
             <div class="country-card__desc">
-              <h2 class="country-card__header">Germany</h2>
-
+              <h2 class="country-card__header">Georgia</h2>
               <div class="country-card__details">
-                <p class="country-card__population">Population: 81,770,900</p>
-                <p class="country-card__region">Region: Europe</p>
-                <p class="country-card__capital">Capital: Berlin</p>
+                <p class="country-card__population">
+                  <strong>Population:</strong> 3,770,900
+                </p>
+                <p class="country-card__region">
+                  <strong>Region:</strong> Europe
+                </p>
+                <p class="country-card__capital">
+                  <strong>Capital:</strong> Tbilisi
+                </p>
               </div>
             </div>
           </div>
@@ -141,14 +179,18 @@
               src="./icons/germany-flag.png"
               alt=""
             />
-
             <div class="country-card__desc">
-              <h2 class="country-card__header">Germany</h2>
-
+              <h2 class="country-card__header">Georgia</h2>
               <div class="country-card__details">
-                <p class="country-card__population">Population: 81,770,900</p>
-                <p class="country-card__region">Region: Europe</p>
-                <p class="country-card__capital">Capital: Berlin</p>
+                <p class="country-card__population">
+                  <strong>Population:</strong> 3,770,900
+                </p>
+                <p class="country-card__region">
+                  <strong>Region:</strong> Europe
+                </p>
+                <p class="country-card__capital">
+                  <strong>Capital:</strong> Tbilisi
+                </p>
               </div>
             </div>
           </div>
@@ -159,14 +201,18 @@
               src="./icons/germany-flag.png"
               alt=""
             />
-
             <div class="country-card__desc">
-              <h2 class="country-card__header">Germany</h2>
-
+              <h2 class="country-card__header">Georgia</h2>
               <div class="country-card__details">
-                <p class="country-card__population">Population: 81,770,900</p>
-                <p class="country-card__region">Region: Europe</p>
-                <p class="country-card__capital">Capital: Berlin</p>
+                <p class="country-card__population">
+                  <strong>Population:</strong> 3,770,900
+                </p>
+                <p class="country-card__region">
+                  <strong>Region:</strong> Europe
+                </p>
+                <p class="country-card__capital">
+                  <strong>Capital:</strong> Tbilisi
+                </p>
               </div>
             </div>
           </div>
@@ -177,14 +223,18 @@
               src="./icons/germany-flag.png"
               alt=""
             />
-
             <div class="country-card__desc">
-              <h2 class="country-card__header">Germany</h2>
-
+              <h2 class="country-card__header">Georgia</h2>
               <div class="country-card__details">
-                <p class="country-card__population">Population: 81,770,900</p>
-                <p class="country-card__region">Region: Europe</p>
-                <p class="country-card__capital">Capital: Berlin</p>
+                <p class="country-card__population">
+                  <strong>Population:</strong> 3,770,900
+                </p>
+                <p class="country-card__region">
+                  <strong>Region:</strong> Europe
+                </p>
+                <p class="country-card__capital">
+                  <strong>Capital:</strong> Tbilisi
+                </p>
               </div>
             </div>
           </div>
