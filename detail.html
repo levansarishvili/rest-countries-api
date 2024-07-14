@@ -14,6 +14,7 @@
 
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./detail.css" />
+    <link rel="stylesheet" href="./queries.css" />
 
     <script defer src="./script.js"></script>
   </head>
@@ -31,7 +32,7 @@
             alt="Moon icon"
           />
           <p class="color-mode__dark">Dark Mode</p>
-          <p class="color-mode__light">Light Mode</p>
+          <p class="color-mode__light hidden">Light Mode</p>
         </button>
       </div>
     </header>
@@ -56,39 +57,45 @@
           <div class="details-section__desc-wrapper">
             <h2 class="details-section__header">Georgia</h2>
 
-            <div class="details-section__desc">
-              <p class="details-section__name">
-                <strong>Native Name:</strong> België
-              </p>
-              <p class="details-section__population">
-                <strong>Population:</strong> 11,319,511
-              </p>
-              <p class="details-section__region">
-                <strong>Region:</strong> Europe
-              </p>
-              <p class="details-section__sub-region">
-                <strong>Sub Region:</strong> Western Europe
-              </p>
-              <p class="details-section__capital">
-                <strong>Capital:</strong> Brussels
-              </p>
-              <p class="details-section__domain">
-                <strong>Top Level Domain:</strong> .be
-              </p>
-              <p class="details-section__currencies">
-                <strong>Currencies:</strong> Euro
-              </p>
-              <p class="details-section__languages">
-                <strong>Languages:</strong> Dutch, French, German
-              </p>
-            </div>
+            <div class="details-section__info-wrapper">
+              <div class="details-section__info">
+                <p class="details-section__name">
+                  <strong>Native Name:</strong> België
+                </p>
+                <p class="details-section__population">
+                  <strong>Population:</strong> 11,319,511
+                </p>
+                <p class="details-section__region">
+                  <strong>Region:</strong> Europe
+                </p>
+                <p class="details-section__sub-region">
+                  <strong>Sub Region:</strong> Western Europe
+                </p>
+                <p class="details-section__capital">
+                  <strong>Capital:</strong> Brussels
+                </p>
+              </div>
 
+              <div class="details-section__info">
+                <p class="details-section__domain">
+                  <strong>Top Level Domain:</strong> .be
+                </p>
+                <p class="details-section__currencies">
+                  <strong>Currencies:</strong> Euro
+                </p>
+                <p class="details-section__languages">
+                  <strong>Languages:</strong> Dutch, French, German
+                </p>
+              </div>
+            </div>
             <div class="border-countries-wrapper">
               <p><strong>Border Countries:</strong></p>
 
-              <a href="index.html" class="border-country"> France </a>
-              <a href="index.html" class="border-country"> Germany </a>
-              <a href="index.html" class="border-country"> Netherlands </a>
+              <div class="border-countries">
+                <a href="index.html" class="border-country"> France </a>
+                <a href="index.html" class="border-country"> Germany </a>
+                <a href="index.html" class="border-country"> Netherlands </a>
+              </div>
             </div>
           </div>
         </div>

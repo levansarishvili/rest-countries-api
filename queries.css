@@ -1,0 +1,55 @@
+/* Media Queries For Responsive Design */
+@media screen and (width<= 960px) {
+  .details-wrapper {
+    flex-direction: column;
+  }
+
+  .details__img-wrapper {
+    max-width: 40rem;
+    gap: 3rem;
+  }
+}
+
+@media screen and (width<= 768px) {
+  html {
+    font-size: 55%;
+  }
+
+  .wrapper {
+    padding: 4rem 6rem;
+  }
+
+  .header-wrapper {
+    padding: 0 6rem;
+  }
+
+  .details-wrapper {
+    gap: 8rem;
+  }
+}
+
+@media screen and (width<= 560px) {
+  html {
+    font-size: 48%;
+  }
+
+  .wrapper {
+    padding: 4rem;
+  }
+
+  .header-wrapper {
+    padding: 0 4rem;
+  }
+
+  .search-section {
+    flex-direction: column;
+  }
+
+  .details-wrapper {
+    gap: 5rem;
+  }
+
+  .details__img-wrapper {
+    max-width: 32rem;
+  }
+}

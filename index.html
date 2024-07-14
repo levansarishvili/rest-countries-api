@@ -13,6 +13,7 @@
     />
 
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./queries.css" />
 
     <script defer src="./script.js"></script>
   </head>
@@ -29,7 +30,7 @@
             alt="Moon icon"
           />
           <p class="color-mode__dark">Dark Mode</p>
-          <p class="color-mode__light">Light Mode</p>
+          <p class="color-mode__light hidden">Light Mode</p>
         </button>
       </div>
     </header>
@@ -38,27 +39,23 @@
       <main class="content-wrapper">
         <!-- ================== Search Section ================== -->
         <section class="search-section">
-          <form action="" class="form search-form">
-            <input
-              class="search-input"
-              type="search"
-              name=""
-              id="country-search"
-              placeholder="Search for a country..."
-              aria-label="Search through countries"
-            />
-          </form>
+          <input
+            class="search-input"
+            type="search"
+            name=""
+            id="country-search"
+            placeholder="Search for a country..."
+            aria-label="Search through countries"
+          />
 
-          <form action="" class="form dropdown-form">
-            <select class="dropdown" name="regions" id="regions">
-              <option class="option" value="" selected>Filter by Region</option>
-              <option class="option" value="africa">Africa</option>
-              <option class="option" value="america">America</option>
-              <option class="option" value="asia">Asia</option>
-              <option class="option" value="europe">Europe</option>
-              <option class="option" value="oceania">Oceania</option>
-            </select>
-          </form>
+          <select class="dropdown" name="regions" id="regions">
+            <option class="option" value="" selected>Filter by Region</option>
+            <option class="option" value="africa">Africa</option>
+            <option class="option" value="america">America</option>
+            <option class="option" value="asia">Asia</option>
+            <option class="option" value="europe">Europe</option>
+            <option class="option" value="oceania">Oceania</option>
+          </select>
         </section>
 
         <!-- ================== Countries Section ================== -->
