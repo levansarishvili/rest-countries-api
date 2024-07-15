@@ -48,14 +48,21 @@
             aria-label="Search through countries"
           />
 
-          <select class="dropdown" name="regions" id="regions">
-            <option class="option" value="" selected>Filter by Region</option>
-            <option class="option" value="africa">Africa</option>
-            <option class="option" value="america">America</option>
-            <option class="option" value="asia">Asia</option>
-            <option class="option" value="europe">Europe</option>
-            <option class="option" value="oceania">Oceania</option>
-          </select>
+          <!-- Custom Dropdown List -->
+          <div class="custom-dropdown">
+            <button class="custom-dropdown__btn">
+              Filter by Region
+              <img src="./icons/expand-more.svg" alt="Expand more icon" />
+            </button>
+
+            <div class="options-wrapper hidden">
+              <div class="option">Africa</div>
+              <div class="option">America</div>
+              <div class="option">Asia</div>
+              <div class="option">Europe</div>
+              <div class="option">Oceania</div>
+            </div>
+          </div>
         </section>
 
         <!-- ================== Countries Section ================== -->

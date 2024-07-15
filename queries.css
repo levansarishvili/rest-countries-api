@@ -12,7 +12,7 @@
 
 @media screen and (width<= 768px) {
   html {
-    font-size: 55%;
+    font-size: 58%;
   }
 
   .wrapper {
@@ -30,7 +30,7 @@
 
 @media screen and (width<= 560px) {
   html {
-    font-size: 48%;
+    font-size: 52%;
   }
 
   .wrapper {
