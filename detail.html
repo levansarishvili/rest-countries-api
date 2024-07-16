@@ -18,7 +18,7 @@
 
     <script defer src="./script.js"></script>
   </head>
-  <body>
+  <body data-theme="light">
     <!-- ================== Header Section ================== -->
 
     <header class="header">
@@ -31,8 +31,7 @@
             src="./icons/moon.svg"
             alt="Moon icon"
           />
-          <p class="color-mode__dark">Dark Mode</p>
-          <p class="color-mode__light hidden">Light Mode</p>
+          <p class="color-mode__desc">Dark Mode</p>
         </button>
       </div>
     </header>
@@ -42,7 +41,12 @@
 
       <section class="details-section">
         <a class="back-btn" href="index.html">
-          <img src="./icons/left-arrow.svg" alt="Left arrow icon" /> Back
+          <img
+            class="back-btn__icon"
+            src="./icons/left-arrow.svg"
+            alt="Left arrow icon"
+          />
+          Back
         </a>
 
         <div class="details-wrapper">

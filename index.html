@@ -17,7 +17,7 @@
 
     <script defer src="./script.js"></script>
   </head>
-  <body>
+  <body data-theme="light">
     <!-- ================== Header Section ================== -->
     <header class="header">
       <div class="header-wrapper">
@@ -29,8 +29,7 @@
             src="./icons/moon.svg"
             alt="Moon icon"
           />
-          <p class="color-mode__dark">Dark Mode</p>
-          <p class="color-mode__light hidden">Light Mode</p>
+          <p class="color-mode__desc">Dark Mode</p>
         </button>
       </div>
     </header>
@@ -52,7 +51,11 @@
           <div class="custom-dropdown">
             <button class="custom-dropdown__btn">
               Filter by Region
-              <img src="./icons/expand-more.svg" alt="Expand more icon" />
+              <img
+                class="custom-dropdown__icon"
+                src="./icons/expand-more.svg"
+                alt="Expand more icon"
+              />
             </button>
 
             <div class="options-wrapper hidden">

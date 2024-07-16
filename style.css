@@ -14,10 +14,8 @@ body {
   font-style: normal;
   font-size: 1.4rem;
 
-  background-color: var(--light-mode-background);
-  color: var(--light-mode-text);
-
-  transition: all 0.3s;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
 }
 
 a:link,
@@ -25,14 +23,14 @@ a:hover,
 a:visited,
 a:active {
   text-decoration: none;
-  color: var(--light-mode-text);
+  color: var(--main-text-color);
 }
 
 :root {
-  --light-mode-background: hsl(0, 0%, 98%);
-  --light-mode-elements: hsl(0, 0%, 100%);
-  --light-mode-text: hsl(200, 15%, 8%);
-  --light-mode-input: hsl(0, 0%, 52%);
+  --main-bg-color: hsl(0, 0%, 98%);
+  --main-el-color: hsl(0, 0%, 100%);
+  --main-text-color: hsl(200, 15%, 8%);
+  --main-input-color: hsl(0, 0%, 52%);
 
   --dark-mode-background: hsl(207, 26%, 17%);
   --dark-mode-elements: hsl(209, 23%, 22%);
@@ -65,7 +63,7 @@ a:active {
 
 /* Header Section */
 .header {
-  background-color: var(--light-mode-elements);
+  background-color: var(--main-el-color);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443);
   width: 100%;
 }
@@ -93,6 +91,8 @@ a:active {
   align-items: center;
   gap: 1rem;
 
+  color: var(--main-text-color);
+
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 2.2rem;
@@ -115,7 +115,9 @@ a:active {
   padding: 0 5rem;
   border: none;
 
-  background: var(--light-mode-elements);
+  color: var(--main-input-color);
+
+  background-color: var(--main-el-color);
   box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
   border-radius: 5px;
 
@@ -128,7 +130,7 @@ a:active {
   outline: none;
 }
 .search-input::placeholder {
-  color: #848484;
+  color: var(--main-input-color);
   font-weight: 400;
   font-size: 1.4rem;
   line-height: 2rem;
@@ -152,7 +154,8 @@ a:active {
   width: 20rem;
   height: 5.6rem;
 
-  background: var(--light-mode-elements);
+  color: var(--main-text-color);
+  background-color: var(--main-el-color);
   box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
   border-radius: 5px;
   border: none;
@@ -171,7 +174,7 @@ a:active {
   width: 20rem;
   padding: 1.5rem;
 
-  background: var(--light-mode-elements);
+  background-color: var(--main-el-color);
   box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
   border-radius: 5px;
   border: none;
@@ -185,11 +188,6 @@ a:active {
   border-radius: 5px;
 
   transition: all 0.3s;
-}
-
-.option:hover {
-  background-color: var(--light-mode-input);
-  color: var(--dark-mode-text);
 }
 
 /* Countries Section */
@@ -208,7 +206,7 @@ a:active {
 
   max-width: 26.4rem;
 
-  background-color: var(--light-mode-elements);
+  background-color: var(--main-el-color);
   box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.0294384);
   border-radius: 5px;
 }
@@ -228,103 +226,8 @@ a:active {
   gap: 1rem;
 }
 
-/* Details Section */
-.details-section {
-  display: flex;
-  flex-direction: column;
-  gap: 5rem;
-}
-
-.back-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-
-  width: 13.6rem;
-  height: 4rem;
-
-  font-weight: 300;
-  font-size: 1.6rem;
-  line-height: 2rem;
-
-  background: var(--light-mode-elements);
-  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.293139);
-  border-radius: 6px;
-}
-
-.details-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 10rem;
-}
-
-.details__img-wrapper {
-  max-width: 56rem;
-  overflow: hidden;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.details__img {
-  width: 100%;
-}
-
-.details-section__desc-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-}
-
-.details-section__info-wrapper {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.details-section__info {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-}
-
-.border-countries-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-top: 2rem;
-  display: flex;
-  gap: 2rem;
-}
-
-.border-countries {
-  display: flex;
-  gap: 2rem;
-}
-
-.border-country {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 9.6rem;
-  height: 2.8rem;
-  background: var(--light-mode-elements);
-  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.104931);
-  border-radius: 2px;
-}
-
 /* ================== Classes for JS ================== */
 
 .hidden {
   display: none;
-}
-
-.dark-mode {
-  background-color: var(--dark-mode-background);
-  color: var(--dark-mode-text);
-}
-
-.dark-mode-header {
-  background-color: var(--dark-mode-elements);
 }
