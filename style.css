@@ -14,8 +14,10 @@ body {
   font-style: normal;
   font-size: 1.4rem;
 
-  background-color: hsl(0, 0%, 98%);
-  color: hsl(200, 15%, 8%);
+  background-color: var(--light-mode-background);
+  color: var(--light-mode-text);
+
+  transition: all 0.3s;
 }
 
 a:link,
@@ -23,10 +25,21 @@ a:hover,
 a:visited,
 a:active {
   text-decoration: none;
-  color: hsl(200, 15%, 8%);
+  color: var(--light-mode-text);
 }
 
-/* ================== REUSABLE CLASSES ================== */
+:root {
+  --light-mode-background: hsl(0, 0%, 98%);
+  --light-mode-elements: hsl(0, 0%, 100%);
+  --light-mode-text: hsl(200, 15%, 8%);
+  --light-mode-input: hsl(0, 0%, 52%);
+
+  --dark-mode-background: hsl(207, 26%, 17%);
+  --dark-mode-elements: hsl(209, 23%, 22%);
+  --dark-mode-text: hsl(0, 0%, 100%);
+}
+
+/* =============== REUSABLE CLASSES =============== */
 
 .btn {
   border: none;
@@ -52,7 +65,7 @@ a:active {
 
 /* Header Section */
 .header {
-  background-color: #ffffff;
+  background-color: var(--light-mode-elements);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443);
   width: 100%;
 }
@@ -102,7 +115,7 @@ a:active {
   padding: 0 5rem;
   border: none;
 
-  background: #ffffff;
+  background: var(--light-mode-elements);
   box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
   border-radius: 5px;
 
@@ -139,7 +152,7 @@ a:active {
   width: 20rem;
   height: 5.6rem;
 
-  background: #ffffff;
+  background: var(--light-mode-elements);
   box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
   border-radius: 5px;
   border: none;
@@ -158,7 +171,7 @@ a:active {
   width: 20rem;
   padding: 1.5rem;
 
-  background: #ffffff;
+  background: var(--light-mode-elements);
   box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
   border-radius: 5px;
   border: none;
@@ -175,8 +188,8 @@ a:active {
 }
 
 .option:hover {
-  background-color: hsl(0, 0%, 52%);
-  color: #ffffff;
+  background-color: var(--light-mode-input);
+  color: var(--dark-mode-text);
 }
 
 /* Countries Section */
@@ -195,7 +208,7 @@ a:active {
 
   max-width: 26.4rem;
 
-  background: hsl(0, 0%, 100%);
+  background-color: var(--light-mode-elements);
   box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.0294384);
   border-radius: 5px;
 }
@@ -235,7 +248,7 @@ a:active {
   font-size: 1.6rem;
   line-height: 2rem;
 
-  background: #ffffff;
+  background: var(--light-mode-elements);
   box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.293139);
   border-radius: 6px;
 }
@@ -296,12 +309,22 @@ a:active {
   align-items: center;
   width: 9.6rem;
   height: 2.8rem;
-  background: #ffffff;
+  background: var(--light-mode-elements);
   box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.104931);
   border-radius: 2px;
 }
 
-/* =================================== */
+/* ================== Classes for JS ================== */
+
 .hidden {
   display: none;
+}
+
+.dark-mode {
+  background-color: var(--dark-mode-background);
+  color: var(--dark-mode-text);
+}
+
+.dark-mode-header {
+  background-color: var(--dark-mode-elements);
 }
