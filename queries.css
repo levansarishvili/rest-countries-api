@@ -1,61 +1,124 @@
 /* Media Queries For Responsive Design */
-@media screen and (width<= 960px) {
-  .details-wrapper {
+@media screen and (width<= 1024px) {
+  .content-wrap {
+    padding: 4rem 6rem;
+  }
+
+  .header__wrap {
+    padding: 0 6rem;
+  }
+
+  /* Details Page */
+  .country-details-wrap {
     flex-direction: column;
   }
 
-  .details__img-wrapper {
-    max-width: 40rem;
+  .country-details__img-wrap {
+    max-width: 50rem;
     gap: 3rem;
   }
 }
 
 @media screen and (width<= 768px) {
-  html {
-    font-size: 58%;
+  .content-wrap {
+    padding: 4rem 4rem;
   }
 
-  .wrapper {
-    padding: 4rem 6rem;
+  .header__wrap {
+    padding: 0 4rem;
   }
 
-  .header-wrapper {
-    padding: 0 6rem;
+  .header__main-title {
+    font-size: 1.8rem;
   }
 
-  .details-wrapper {
+  .section-find-country {
+    gap: 5rem;
+  }
+
+  .content-inner {
+    gap: 4rem;
+  }
+
+  .color-switcher-btn {
+    font-size: 1.4rem;
+  }
+
+  /* Details Page */
+  .go-back-btn {
+    font-size: 1.4rem;
+  }
+
+  .country-details__desc__title {
+    font-size: 2.6rem;
+  }
+
+  .country-details-wrap {
     gap: 8rem;
   }
 }
 
-@media screen and (width<= 560px) {
-  html {
-    font-size: 52%;
+@media screen and (width<= 480px) {
+  body {
+    font-size: 1.2rem;
   }
 
-  .wrapper {
-    padding: 4rem;
+  .content-wrap {
+    padding: 2rem;
   }
 
-  .header-wrapper {
-    padding: 0 4rem;
+  .header__wrap {
+    padding: 0 2rem;
   }
 
-  .search-section {
+  .header__main-title {
+    font-size: 1.4rem;
+  }
+
+  .color-switcher-btn {
+    font-size: 1.2rem;
+  }
+
+  .section-find-country {
+    gap: 4rem;
+  }
+
+  .search-input::placeholder {
+    font-size: 1.2rem;
+  }
+
+  .filter-dropdown__btn {
+    font-size: 1.2rem;
+  }
+
+  .filter-dropdown__option {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+
+  .section-find-country {
     flex-direction: column;
   }
 
-  .details-wrapper {
+  /* Details Page */
+  .country-details-wrap {
     gap: 5rem;
   }
 
-  .details__img-wrapper {
+  .country-details__desc__title {
+    font-size: 2.2rem;
+  }
+
+  .details__desc__main {
+    font-size: 1.4rem;
+  }
+
+  .country-details__img-wrap {
     max-width: 32rem;
   }
-}
 
-@media screen and (width<= 560px) {
-  html {
-    font-size: 48%;
+  .details__desc__border-countries-wrap {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }

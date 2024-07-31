@@ -1,32 +1,34 @@
+@import url(./style.css);
+
 /* Details Section */
 .section-country-details {
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 8rem;
 }
 
-.btn--go-back {
+.go-back-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
-
+  gap: 1rem;
   width: 13.6rem;
   height: 4rem;
-
-  font-weight: 300;
   font-size: 1.6rem;
   line-height: 2rem;
-
-  background-color: var(--main-el-color);
-  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.293139);
+  background-color: var(--light-mode-el-color);
   border-radius: 6px;
+  transition: all ease-in-out 0.3s;
+}
+
+.go-back-btn:hover {
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.293139);
 }
 
 .country-details-wrap {
   display: flex;
   align-items: center;
-  gap: 10rem;
+  gap: 12rem;
 }
 
 .country-details__img-wrap {
@@ -44,43 +46,56 @@
 .country-details__desc-wrap {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2.5rem;
 }
 
-.country-details__info-wrap {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 2rem;
+.country-details__desc__title {
+  font-size: 3.2rem;
+  font-weight: 800;
 }
 
-.details-section__info {
+.country-details__desc {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 5rem;
 }
 
-.details__border-countries-wrap {
+.details__desc__main {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+}
+
+.details__desc__border-countries-wrap {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.border-countries__title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 2.4rem;
+  flex-shrink: 0;
+}
+
+.border-countries {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  margin-top: 2rem;
-  display: flex;
-  gap: 2rem;
+  gap: 1rem;
 }
 
-.details__border-countries {
-  display: flex;
-  gap: 2rem;
-}
-
-.details__border-country {
+.border-country {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 9.6rem;
   height: 2.8rem;
-  background-color: var(--main-el-color);
-  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.104931);
+  background-color: var(--light-mode-el-color);
   border-radius: 2px;
+  transition: all ease-in-out 0.3s;
+}
+
+.border-country:hover {
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.1);
 }
