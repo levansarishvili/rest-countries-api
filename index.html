@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Rest-Countries-API</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,32 +12,30 @@
       rel="stylesheet"
     />
 
+    <!-- Linking CSS -->
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./queries.css" />
 
+    <!-- Linking Javascript -->
     <script defer src="./script.js"></script>
   </head>
   <body data-theme="light">
     <!-- ================== Header Section ================== -->
     <header class="header">
-      <div class="header-wrapper">
-        <h1 class="main-header">Where in the world?</h1>
+      <div class="header__wrap">
+        <h1 class="header__main-header">Where in the world?</h1>
 
-        <button class="btn color-mode-btn">
-          <img
-            class="color-mode__icon"
-            src="./icons/moon.svg"
-            alt="Moon icon"
-          />
-          <p class="color-mode__desc">Dark Mode</p>
+        <button class="btn btn--color-switcher">
+          <img class="btn__icon" src="./icons/moon.svg" alt="Moon icon" />
+          <p class="btn__text">Dark Mode</p>
         </button>
       </div>
     </header>
 
-    <div class="wrapper">
-      <main class="content-wrapper">
+    <div class="content-wrap">
+      <main class="content-inner">
         <!-- ================== Search Section ================== -->
-        <section class="search-section">
+        <section class="section-find-country">
           <input
             class="search-input"
             type="search"
@@ -48,29 +46,29 @@
           />
 
           <!-- Custom Dropdown List -->
-          <div class="custom-dropdown">
-            <button class="custom-dropdown__btn">
+          <div class="filter-dropdown">
+            <button class="filter-dropdown__btn">
               Filter by Region
               <img
-                class="custom-dropdown__icon"
+                class="filter-dropdown__icon"
                 src="./icons/expand-more.svg"
                 alt="Expand more icon"
               />
             </button>
 
-            <div class="options-wrapper hidden">
-              <div class="option">Africa</div>
-              <div class="option">America</div>
-              <div class="option">Asia</div>
-              <div class="option">Europe</div>
-              <div class="option">Oceania</div>
+            <div class="filter-dropdown__options hidden">
+              <div class="filter-dropdown__option">Africa</div>
+              <div class="filter-dropdown__option">America</div>
+              <div class="filter-dropdown__option">Asia</div>
+              <div class="filter-dropdown__option">Europe</div>
+              <div class="filter-dropdown__option">Oceania</div>
             </div>
           </div>
         </section>
 
         <!-- ================== Countries Section ================== -->
-        <section class="countries-section">
-          <a href="detail.html">
+        <section class="section-country-cards">
+          <a class="country-card-wrap" href="detail.html">
             <div class="country-card">
               <img
                 class="country-card__img"

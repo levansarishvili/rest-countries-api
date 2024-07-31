@@ -53,3 +53,9 @@
     max-width: 32rem;
   }
 }
+
+@media screen and (width<= 560px) {
+  html {
+    font-size: 48%;
+  }
+}

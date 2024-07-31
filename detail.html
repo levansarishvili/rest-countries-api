@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Rest-Countries-API</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,98 +12,105 @@
       rel="stylesheet"
     />
 
+    <!-- Linking CSS -->
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./detail.css" />
     <link rel="stylesheet" href="./queries.css" />
 
+    <!-- Linking Javascript -->
     <script defer src="./script.js"></script>
   </head>
   <body data-theme="light">
     <!-- ================== Header Section ================== -->
 
     <header class="header">
-      <div class="header-wrapper">
-        <h1 class="main-header">Where in the world?</h1>
+      <div class="header__wrap">
+        <h1 class="header__main-title">Where in the world?</h1>
 
-        <button class="btn color-mode-btn">
-          <img
-            class="color-mode__icon"
-            src="./icons/moon.svg"
-            alt="Moon icon"
-          />
-          <p class="color-mode__desc">Dark Mode</p>
+        <button class="btn btn--color-switcher">
+          <img class="btn__icon" src="./icons/moon.svg" alt="Moon icon" />
+          <p class="btn__text">Dark Mode</p>
         </button>
       </div>
     </header>
 
-    <div class="wrapper">
-      <!-- ================== Details Section ================== -->
-
-      <section class="details-section">
-        <a class="back-btn" href="index.html">
-          <img
-            class="back-btn__icon"
-            src="./icons/left-arrow.svg"
-            alt="Left arrow icon"
-          />
-          Back
-        </a>
-
-        <div class="details-wrapper">
-          <div class="details__img-wrapper">
+    <div class="content-wrap">
+      <main class="content-inner">
+        <!-- ================== Details Section ================== -->
+        <section class="section-country-details">
+          <a class="btn btn--go-back" href="index.html">
             <img
-              class="details__img"
-              src="./icons/germany-flag.png"
-              alt="Country flag"
+              class="btn__icon"
+              src="./icons/left-arrow.svg"
+              alt="Left arrow icon"
             />
-          </div>
+            Back
+          </a>
 
-          <div class="details-section__desc-wrapper">
-            <h2 class="details-section__header">Georgia</h2>
+          <div class="country-details-wrap">
+            <!-- Country Flag Image -->
+            <div class="country-details__img-wrap">
+              <img
+                class="country-details__img"
+                src="./icons/germany-flag.png"
+                alt="Country flag"
+              />
+            </div>
 
-            <div class="details-section__info-wrapper">
-              <div class="details-section__info">
-                <p class="details-section__name">
-                  <strong>Native Name:</strong> België
-                </p>
-                <p class="details-section__population">
-                  <strong>Population:</strong> 11,319,511
-                </p>
-                <p class="details-section__region">
-                  <strong>Region:</strong> Europe
-                </p>
-                <p class="details-section__sub-region">
-                  <strong>Sub Region:</strong> Western Europe
-                </p>
-                <p class="details-section__capital">
-                  <strong>Capital:</strong> Brussels
-                </p>
-              </div>
+            <div class="country-details__desc-wrap">
+              <h2 class="country-details__desc__title">Georgia</h2>
 
-              <div class="details-section__info">
-                <p class="details-section__domain">
-                  <strong>Top Level Domain:</strong> .be
-                </p>
-                <p class="details-section__currencies">
-                  <strong>Currencies:</strong> Euro
-                </p>
-                <p class="details-section__languages">
-                  <strong>Languages:</strong> Dutch, French, German
-                </p>
+              <div class="country-details__desc">
+                <!-- Main Description of Country -->
+                <div class="details__desc__main">
+                  <p class="details__desc__name">
+                    <strong>Native Name:</strong> België
+                  </p>
+                  <p class="details__desc__population">
+                    <strong>Population:</strong> 11,319,511
+                  </p>
+                  <p class="details__desc__region">
+                    <strong>Region:</strong> Europe
+                  </p>
+                  <p class="details__desc__sub-region">
+                    <strong>Sub Region:</strong> Western Europe
+                  </p>
+                  <p class="details__desc__capital">
+                    <strong>Capital:</strong> Brussels
+                  </p>
+
+                  <p class="details__desc__domain">
+                    <strong>Top Level Domain:</strong> .be
+                  </p>
+                  <p class="details__desc__currencies">
+                    <strong>Currencies:</strong> Euro
+                  </p>
+                  <p class="details__desc__languages">
+                    <strong>Languages:</strong> Dutch, French, German
+                  </p>
+                </div>
+
+                <!-- Border Countries -->
+                <div class="details__desc__border-countries-wrap">
+                  <p><strong>Border Countries:</strong></p>
+
+                  <div class="details__desc__border-countries">
+                    <a href="index.html" class="details__desc__border-country">
+                      France
+                    </a>
+                    <a href="index.html" class="details__desc__border-country">
+                      Germany
+                    </a>
+                    <a href="index.html" class="details__desc__border-country">
+                      Netherlands
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="border-countries-wrapper">
-              <p><strong>Border Countries:</strong></p>
-
-              <div class="border-countries">
-                <a href="index.html" class="border-country"> France </a>
-                <a href="index.html" class="border-country"> Germany </a>
-                <a href="index.html" class="border-country"> Netherlands </a>
-              </div>
-            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
     </div>
   </body>
 </html>
