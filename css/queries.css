@@ -1,5 +1,6 @@
 /* Media Queries For Responsive Design */
-@media screen and (width<= 1024px) {
+/* Less or equal to 1024px */
+@media screen and (width<= 64em) {
   .content-wrap {
     padding: 4rem 6rem;
   }
@@ -19,7 +20,8 @@
   }
 }
 
-@media screen and (width<= 768px) {
+/* Less or equal to 768px */
+@media screen and (width<= 48em) {
   .content-wrap {
     padding: 4rem 4rem;
   }
@@ -32,8 +34,21 @@
     font-size: 1.8rem;
   }
 
+  .btn__icon-wrap svg {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
   .section-find-country {
     gap: 5rem;
+  }
+
+  .search-input {
+    height: 4.8rem;
+  }
+
+  .filter-dropdown__btn {
+    height: 4.8rem;
   }
 
   .content-inner {
@@ -49,6 +64,10 @@
     font-size: 1.4rem;
   }
 
+  .section-country-details {
+    gap: 6.4rem;
+  }
+
   .country-details__desc__title {
     font-size: 2.6rem;
   }
@@ -58,7 +77,15 @@
   }
 }
 
-@media screen and (width<= 480px) {
+/* Less or equal to 640px */
+@media screen and (width <= 40em) {
+  .section-find-country {
+    flex-direction: column;
+  }
+}
+
+/* Less or equal to 480px */
+@media screen and (width<= 30em) {
   body {
     font-size: 1.2rem;
   }
@@ -94,10 +121,6 @@
   .filter-dropdown__option {
     font-size: 1.2rem;
     line-height: 1.6rem;
-  }
-
-  .section-find-country {
-    flex-direction: column;
   }
 
   /* Details Page */

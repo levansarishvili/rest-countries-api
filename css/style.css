@@ -1,4 +1,18 @@
 /* ================== GENERAL CSS ================== */
+:root {
+  --main-bg-color: #fafafa;
+  --main-el-bg-color: #fff;
+  --main-text-color: #111517;
+  --input-text-color: #848484;
+}
+
+.darkmode {
+  --main-bg-color: #202c36;
+  --main-el-bg-color: #2b3844;
+  --main-text-color: #fff;
+  --input-text-color: #fff;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -15,8 +29,8 @@ body {
   font-weight: 300;
   font-style: normal;
   line-height: normal;
-  background-color: var(--light-mode-bg-color);
-  color: var(--light-mode-text-color);
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
 }
 
 a:link,
@@ -24,18 +38,7 @@ a:hover,
 a:visited,
 a:active {
   text-decoration: none;
-  color: var(--light-mode-text-color);
-}
-
-:root {
-  --light-mode-bg-color: hsl(0, 0%, 98%);
-  --light-mode-el-color: hsl(0, 0%, 100%);
-  --light-mode-text-color: hsl(200, 15%, 8%);
-  --light-mode-input-color: hsl(0, 0%, 52%);
-
-  --dark-mode-bg-color: hsl(207, 26%, 17%);
-  --dark-mode-el-color: hsl(209, 23%, 22%);
-  --dark-mode-text-color: hsl(0, 0%, 100%);
+  color: var(--main-text-color);
 }
 
 .content-wrap {
@@ -57,9 +60,12 @@ a:active {
 /* ================== MAIN SECTION ================== */
 /* Header Section */
 .header {
-  background-color: var(--light-mode-el-color);
+  background-color: var(--main-el-bg-color);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443);
   width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
 }
 
 .header__wrap {
@@ -81,7 +87,7 @@ a:active {
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  color: var(--light-mode-text-color);
+  color: var(--main-text-color);
   font-weight: 600;
   font-size: 1.6rem;
   cursor: pointer;
@@ -89,11 +95,44 @@ a:active {
   background-color: transparent;
 }
 
+.btn__icon-wrap {
+  display: flex;
+}
+
+.color-switcher-btn svg path {
+  fill: var(--main-text-color);
+}
+
+.btn__icon-wrap svg:last-child {
+  display: none;
+}
+
+.darkmode .btn__icon-wrap svg:first-child {
+  display: none;
+}
+
+.darkmode .btn__icon-wrap svg:last-child {
+  display: flex;
+}
+
+.btn__text-wrap .btn__text:last-child {
+  display: none;
+}
+
+.darkmode .btn__text-wrap .btn__text:last-child {
+  display: flex;
+}
+
+.darkmode .btn__text-wrap .btn__text:first-child {
+  display: none;
+}
+
 /* Find country Section */
 .section-find-country {
   display: flex;
   justify-content: space-between;
   gap: 6rem;
+  margin-top: 8rem;
 }
 
 .search-input {
@@ -101,13 +140,13 @@ a:active {
   max-width: 48rem;
   height: 5.6rem;
   width: 100%;
-  padding: 0 5rem;
+  padding: 0 2.4rem 0 5rem;
   border: none;
-  color: var(--light-mode-input-color);
-  background-color: var(--light-mode-el-color);
+  color: var(--input-text-color);
+  background-color: var(--main-el-bg-color);
   box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
   border-radius: 5px;
-  background-image: url(./icons/search.svg);
+  background-image: url(../icons/search.svg);
   background-repeat: no-repeat;
   background-position: 2rem;
 }
@@ -117,7 +156,7 @@ a:active {
 }
 
 .search-input::placeholder {
-  color: var(--main-input-color);
+  color: var(--input-text-color);
   font-weight: 400;
   font-size: 1.4rem;
   line-height: 2rem;
@@ -139,12 +178,16 @@ a:active {
   gap: 3rem;
   width: 20rem;
   height: 5.6rem;
-  color: var(--light-mode-text-color);
-  background-color: var(--light-mode-el-color);
+  color: var(--main-text-color);
+  background-color: var(--main-el-bg-color);
   box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
   border-radius: 5px;
   border: none;
   cursor: pointer;
+}
+
+.filter-dropdown__btn path {
+  fill: var(--main-text-color);
 }
 
 .filter-dropdown__options {
@@ -156,7 +199,7 @@ a:active {
   gap: 0.8rem;
   width: 20rem;
   padding: 1.6rem 2.4rem;
-  background-color: var(--light-mode-el-color);
+  background-color: var(--main-el-bg-color);
   box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
   border-radius: 5px;
   border: none;
@@ -185,13 +228,9 @@ a:active {
   flex-direction: column;
   gap: 2.4rem;
   max-width: 26.4rem;
-  background-color: var(--light-mode-el-color);
-  color: var(--light-mode-text-color);
+  background-color: var(--main-el-bg-color);
+  color: var(--main-text-color);
   border-radius: 5px;
-  transition: all ease-in-out 0.3s;
-}
-
-.country-card:hover {
   box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.0294384);
 }
 

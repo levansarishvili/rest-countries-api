@@ -2,6 +2,7 @@
 
 /* Details Section */
 .section-country-details {
+  margin-top: 8rem;
   display: flex;
   flex-direction: column;
   gap: 8rem;
@@ -16,13 +17,13 @@
   height: 4rem;
   font-size: 1.6rem;
   line-height: 2rem;
-  background-color: var(--light-mode-el-color);
+  background-color: var(--main-el-bg-color);
   border-radius: 6px;
-  transition: all ease-in-out 0.3s;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.293139);
 }
 
-.go-back-btn:hover {
-  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.293139);
+.go-back-btn svg path {
+  fill: var(--main-text-color);
 }
 
 .country-details-wrap {
@@ -91,11 +92,7 @@
   align-items: center;
   width: 9.6rem;
   height: 2.8rem;
-  background-color: var(--light-mode-el-color);
+  background-color: var(--main-el-bg-color);
   border-radius: 2px;
-  transition: all ease-in-out 0.3s;
-}
-
-.border-country:hover {
   box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.1);
 }
