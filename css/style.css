@@ -151,6 +151,10 @@ a:active {
   background-position: 2rem;
 }
 
+.darkmode .search-input {
+  background-image: url(../icons/search-light.svg);
+}
+
 .search-input:focus {
   outline: none;
 }
@@ -232,6 +236,16 @@ a:active {
   color: var(--main-text-color);
   border-radius: 5px;
   box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.0294384);
+}
+
+.country-card__img-wrap {
+  height: 17rem;
+  overflow: hidden;
+}
+
+.country-card__img {
+  object-fit: cover;
+  height: 100%;
 }
 
 .country-card__desc {
