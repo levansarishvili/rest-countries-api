@@ -40,18 +40,12 @@ const renderError = (message) => {
 };
 
 // Function to get all country data from API
-const getAllCountryData = () => {
-  fetch(`https://restcountries.com/v3.1/all`)
-    .then((response) => response.json())
-    .then((data) => {
-      allCountriesData = data;
-      renderCountry(data);
-      console.log(allCountriesData);
-    })
-    .catch((err) => {
-      console.log(`${err}`);
-      renderError(`Something went wrong ⚠️⚠️⚠️ ${err.message}. Try again!`);
-    });
+const getAllCountryData = async () => {
+  const response = await fetch(`https://restcountries.com/v3.1/all`);
+  const data = await response.json();
+
+  allCountriesData = data;
+  renderCountry(data);
 };
 getAllCountryData();
 
@@ -59,7 +53,7 @@ getAllCountryData();
 const renderCountry = (data) => {
   countryCardsContainer.innerHTML = ""; // Clear existing country cards
   data.forEach((el) => {
-    if (el.population >= 1000000) {
+    if (el.population >= 700000) {
       const countryCardHtml = `
         <a class="country-card-wrap" href="detail.html" data-country="${
           el.name.common
@@ -102,6 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === "Enter") {
       const searchedCountry = searchInput.value.toLowerCase();
       searchInput.value = "";
+      // Create filtered countries data
       const filteredCountries = allCountriesData.filter((country) =>
         country.name.common.toLowerCase().startsWith(searchedCountry)
       );
@@ -119,16 +114,18 @@ document.addEventListener("DOMContentLoaded", () => {
   optionsContainer.addEventListener("click", (e) => {
     const target = e.target;
 
+    // Check if clicked element is filter dropdown option
     if (target.classList.contains("filter-dropdown__option")) {
       const region = target.textContent.toLowerCase();
       optionsContainer.classList.add("hidden");
-      console.log(region);
 
-      const filteredCountries = allCountriesData.filter((country) => {
-        country.region.toLowerCase().includes(region);
-      });
-      console.log(filteredCountries);
-      renderCountry(filteredCountries);
+      // Create filtered countries data
+      const filteredCountriesData = allCountriesData.filter((country) =>
+        country.region.toLowerCase().includes(region)
+      );
+
+      // Render countries filtered by region
+      renderCountry(filteredCountriesData);
     }
   });
 });
