@@ -47,17 +47,19 @@ const getAllCountryData = async () => {
   allCountriesData = data;
   renderCountry(data);
 };
+
 getAllCountryData();
 
 // Function to render country card
 const renderCountry = (data) => {
   countryCardsContainer.innerHTML = ""; // Clear existing country cards
+
   data.forEach((el) => {
     if (el.population >= 700000) {
       const countryCardHtml = `
-        <a class="country-card-wrap" href="detail.html" data-country="${
-          el.name.common
-        }">
+        <a class="country-card-wrap" href="detail.html?code=${
+          el.cca3
+        }" data-country-code="${el.cca3}">
                <div class="country-card">
                 <div class="country-card__img-wrap">
                    <img
@@ -85,6 +87,7 @@ const renderCountry = (data) => {
                </div>
              </a>
        `;
+      countryCardsContainer.style.opacity = 1;
       countryCardsContainer.insertAdjacentHTML("beforeend", countryCardHtml);
     }
   });
@@ -128,4 +131,16 @@ document.addEventListener("DOMContentLoaded", () => {
       renderCountry(filteredCountriesData);
     }
   });
+});
+
+// Get country code when click country card
+let countryCode;
+
+countryCardsContainer.addEventListener("click", (e) => {
+  // Check if clicked element is country card
+  const target = e.target.closest(".country-card-wrap");
+  if (target && target.classList.contains("country-card-wrap")) {
+    countryCode = target.getAttribute("data-country-code");
+    console.log(countryCode);
+  }
 });
