@@ -1,6 +1,6 @@
 # Frontend Mentor - REST Countries API with color theme switcher solution
 
-## The challenge
+## Project overview
 
 Users can to:
 
@@ -17,8 +17,8 @@ Users can to:
 
 ## Links
 
-- Solution URL: [Add solution URL here](https://github.com/levansarishvili/rest-countries-api)
-- Live Site URL: [Add live site URL here](https://levansarishvili.github.io/rest-countries-api/index.html)
+- Solution URL: [https://github.com/levansarishvili/rest-countries-api](https://github.com/levansarishvili/rest-countries-api)
+- Live Site URL: [https://levansarishvili.github.io/rest-countries-api/index.html](https://levansarishvili.github.io/rest-countries-api/index.html)
 
 ## Built with
 
@@ -32,6 +32,6 @@ Users can to:
 
 ## Author
 
-- Linkedin: [Add solution URL here](https://www.linkedin.com/in/levan-sarishvili-b87245b1/)
-- Github: [Add solution URL here](https://github.com/levansarishvili)
-- Portfolio: [Add solution URL here](https://levansarishvili.github.io/my-cv/)
+- Linkedin: [https://www.linkedin.com/in/levan-sarishvili-b87245b1/](https://www.linkedin.com/in/levan-sarishvili-b87245b1/)
+- Github: [https://github.com/levansarishvili](https://github.com/levansarishvili)
+- Portfolio: [https://levansarishvili.github.io/my-cv/](https://levansarishvili.github.io/my-cv/)
