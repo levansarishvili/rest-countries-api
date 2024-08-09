@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   // Function to render country details
   const renderCountryDetails = (data) => {
     const countryDetailHtml = `
-  <div class="country-details-wrap">
             <!-- Country Flag Image -->
             <div class="country-details__img-wrap">
               <img
@@ -62,22 +61,36 @@ document.addEventListener("DOMContentLoaded", async () => {
                   <p class="border-countries__title">
                     <strong>Border Countries:</strong>
                   </p>
-
-                  <div class="border-countries">
-                    <a href="index.html" class="border-country"> ${
-                      data.borders
-                    } </a>
-                    <a href="index.html" class="border-country"> Germany </a>
-                    <a href="index.html" class="border-country">
-                      Netherlands
-                    </a>
+                  <div class="border-countries">   
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+       
     `;
-    countryDetailsContainer.innerHTML = countryDetailHtml;
+
+    countryDetailsContainer.insertAdjacentHTML("beforeend", countryDetailHtml);
+
+    const borderCountriesContainer =
+      document.querySelector(".border-countries");
+
+    // Add border countries
+    if (data.borders && data.borders.length > 0) {
+      for (let i = 0; i < data.borders.length; i++) {
+        const borderCountryHtml = `
+        <a href="" class="border-country">
+          ${data.borders[i]}
+        </a>`;
+
+        borderCountriesContainer.insertAdjacentHTML(
+          "beforeend",
+          borderCountryHtml
+        );
+      }
+    } else {
+      borderCountriesContainer.innerHTML =
+        "<p>This country does not have neighboring countries! ❌</p>";
+    }
   };
 
   // Function to get country data by code

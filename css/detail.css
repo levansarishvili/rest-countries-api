@@ -29,11 +29,13 @@
 .country-details-wrap {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 12rem;
 }
 
 .country-details__img-wrap {
   max-width: 56rem;
+  flex-shrink: 0;
   overflow: hidden;
   border-radius: 5px;
   overflow: hidden;
