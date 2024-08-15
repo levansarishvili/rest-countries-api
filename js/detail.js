@@ -87,6 +87,16 @@ document.addEventListener("DOMContentLoaded", async () => {
           borderCountryHtml
         );
       }
+
+      // const borderCountries = document.querySelectorAll(".border-country");
+      // // Render border Country's details
+      // borderCountries.forEach((el) =>
+      //   el.addEventListener("click", () => {
+      //     const countryCode = el.textContent;
+      //     console.log(el.textContent);
+      //     // getCountryDataByCode(countryCode);
+      //   })
+      // );
     } else {
       borderCountriesContainer.innerHTML =
         "<p>This country does not have neighboring countries! ❌</p>";

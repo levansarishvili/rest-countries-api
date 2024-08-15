@@ -18,11 +18,17 @@ const renderError = (message) => {
 
 // Function to get all country data from API
 const getAllCountryData = async () => {
-  const response = await fetch(`https://restcountries.com/v3.1/all`);
-  const data = await response.json();
+  try {
+    const response = await fetch(`https://restcountries.com/v3.1/all`);
+    if (!response.ok) throw new Error("All country data didn't load!");
+    const data = await response.json();
 
-  allCountriesData = data;
-  renderCountry(data);
+    allCountriesData = data;
+    renderCountry(data);
+  } catch (error) {
+    console.log(error);
+    renderError(`⚠ ${error.message}`);
+  }
 };
 
 getAllCountryData();
